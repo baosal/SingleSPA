@@ -5,7 +5,7 @@ const path = require("path");
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "POC",
-    projectName: "module-1",
+    projectName: "module-2",
     webpackConfigEnv,
     argv,
   });
@@ -15,7 +15,7 @@ module.exports = (webpackConfigEnv, argv) => {
 
   return merge(defaultConfig, {
     devServer: {
-      port: 9001,
+      port: 9002,
     },
     // modify the webpack config however you'd like to by adding to this object
   });

@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  background-color: #d1fae5; /* shell background */
+  height: 100vh;
+}
+
+.shell-layout {
+  padding: 64px 0;
+  background-color: #d1fae5;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.shell-appHeader {
+  padding-bottom: 16px;
+}
+
+.shell-appTitle {
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.shell-body {
+  display: flex;
+  margin: 12px;
+  background-color: #d1fae5; /* shell background */
+  height: 100%;
+  overflow: auto;
+}
+.shell-sidebar {
+  width: 280px;
+  flex: 0 0 280px;
+  background: linear-gradient(
+    135deg,
+    #e0f2fe 0%,
+    #bfdbfe 100%
+  ); /* gradient background */
+  border: 1px dashed #93c5fd;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.shell-content {
+  min-width: 0;
+  background-color: #fef9c3; /* light yellow */
+  border: 1px dashed #facc15;
+  padding: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: auto;
+}
+
+.shell-contentHeader {
+  padding: 8px 16px 16px 16px;
+}
+
+.shell-contentTitle {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.shell-sidebarLabel {
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.shell-contentLabel {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #0f172a;
+}
