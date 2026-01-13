@@ -25,14 +25,12 @@
     <div class="shell-body">
       <aside class="shell-sidebar">
         <header class="shell-contentHeader">
-          <div class="shell-contentLabel">Side bar (Fixed app)</div>
         </header>
         <application name="@POC/nav-bar"></application>
       </aside>
 
       <section class="shell-content">
         <header class="shell-contentHeader">
-          <div class="shell-contentLabel">Content area (routed apps)</div>
         </header>
 
         <route default>
@@ -50,6 +48,10 @@
         <route path="module-2">
           <application name="@POC/module-2"></application>
         </route>
+        <route path="auth">
+          <application name="@sag-aftra/auth"></application>
+        </route>
+        
       </section>
     </div>
   </main>
