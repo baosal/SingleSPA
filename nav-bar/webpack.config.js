@@ -4,13 +4,13 @@ const path = require("path");
 
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
-    orgName: "POC",
+    orgName: "sag-aftra",
     projectName: "nav-bar",
     webpackConfigEnv,
     argv,
   });
 
-  // Override the single-spa default entry (src/POC-nav-bar) to use single-spa.tsx.
+  // Override the single-spa default entry (src/sag-aftra-nav-bar) to use single-spa.tsx.
   defaultConfig.entry = path.resolve(__dirname, "src/single-spa.tsx");
 
   return merge(defaultConfig, {

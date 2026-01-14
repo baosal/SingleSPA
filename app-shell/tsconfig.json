@@ -1,6 +1,6 @@
 {
   "extends": "ts-config-single-spa",
-  "files": ["src/POC-root-config.ts"],
+  "files": ["src/sag-aftra-root-config.ts"],
   "compilerOptions": {
     "declarationDir": "dist"
   },

@@ -1,5 +1,5 @@
 {
-  "name": "@POC/nav-bar",
+  "name": "@sag-aftra/nav-bar",
   "scripts": {
     "dev": "webpack serve",
     "dsa": "webpack serve --env standalone",
@@ -64,5 +64,5 @@
     "react-oidc-context": "^3.3.0",
     "react-router": "^7.7.1"
   },
-  "types": "dist/POC-nav-bar.d.ts"
+  "types": "dist/sag-aftra-nav-bar.d.ts"
 }

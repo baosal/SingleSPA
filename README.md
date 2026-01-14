@@ -56,8 +56,8 @@ Open the shell at:
 Routes available within the shell:
 
 - `/dashboard` → dashboard view (default)
-- `/module-1` → loads `@POC/module-1`
-- `/module-2` → loads `@POC/module-2`
+- `/module-1` → loads `@sag-aftra/module-1`
+- `/module-2` → loads `@sag-aftra/module-2`
 
 The app shell injects local import maps when started with `npm run dev`, mapping each microfrontend name to its dev server URL.
 
@@ -68,7 +68,7 @@ The app shell injects local import maps when started with `npm run dev`, mapping
 - Purpose: integrate and test routing, layout, and cross-app behavior inside the shell.
 - Command: run `npm run dev` for each microfrontend so the shell consumes their JS bundles via the import map.
 - Where to browse: open the shell at http://localhost:9000 and navigate to `/module-1`, `/module-2`.
-- Output: serves only the JS bundles (no standalone HTML page) for `@POC/nav-bar`, `@POC/module-1`, and `@POC/module-2` at the configured ports.
+- Output: serves only the JS bundles (no standalone HTML page) for `@sag-aftra/nav-bar`, `@sag-aftra/module-1`, and `@sag-aftra/module-2` at the configured ports.
 - Bundle size: smaller; framework libs like `react`, `react-dom`, `react-router-dom` are externalized and provided by the app shell via import maps/CDN.
 
 **Standalone Mode (isolate a single app):**
@@ -87,5 +87,5 @@ The app shell injects local import maps when started with `npm run dev`, mapping
 
 ## Notes
 
-- The app shell uses `single-spa-layout` with routes defined in `microfrontend-layout.html`, and injects `dashboard-view.html` at runtime within `POC-root-config.ts`.
+- The app shell uses `single-spa-layout` with routes defined in `microfrontend-layout.html`, and injects `dashboard-view.html` at runtime within `sag-aftra-root-config.ts`.
 - Import maps in development are injected by `index.ejs` when `--env isLocal` is used.

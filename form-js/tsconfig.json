@@ -4,7 +4,7 @@
     "jsx": "react-jsx",
     "declarationDir": "dist"
   },
-  "files": ["src/single-spa.tsx"],
-  "include": ["src/**/*"],
-  "exclude": ["src/**/*.test*"]
+  "files": ["app/spa/single-spa.tsx"],
+  "include": ["app/**/*"],
+  "exclude": ["app/**/*.test*"]
 }

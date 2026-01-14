@@ -1,5 +1,5 @@
 {
-  "name": "@POC/root-config",
+  "name": "@sag-aftra/root-config",
   "scripts": {
     "dev": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src --ext js,ts,tsx",
@@ -47,5 +47,5 @@
     "single-spa-layout": "^1.6.0",
     "oidc-client-ts": "^3.3.0"
   },
-  "types": "dist/POC-root-config.d.ts"
+  "types": "dist/root-config.d.ts"
 }

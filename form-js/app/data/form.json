@@ -1,0 +1,37 @@
+{
+  "components": [
+    {
+      "label": "Range",
+      "type": "range",
+      "layout": {
+        "row": "Row_1dn58ry",
+        "columns": null
+      },
+      "id": "Field_057ne56",
+      "key": "range_pxqiqx"
+    },
+    {
+      "label": "Text area",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0o3z5zx",
+        "columns": null
+      },
+      "id": "Field_0eles2w",
+      "key": "textarea_7qb6g"
+    },
+    {
+      "label": "Text field",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1orfvop",
+        "columns": null
+      },
+      "id": "Field_0umt5le",
+      "key": "textfield_xjxvgu"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0fcgrjo",
+  "schemaVersion": 19
+}

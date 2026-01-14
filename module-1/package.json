@@ -1,5 +1,5 @@
 {
-  "name": "@POC/module-1",
+  "name": "@sag-aftra/module-1",
   "scripts": {
     "dev": "webpack serve",
     "dsa": "webpack serve --env standalone",
@@ -57,5 +57,5 @@
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9"
   },
-  "types": "dist/POC-module-1.d.ts"
+  "types": "dist/sag-aftra-module-1.d.ts"
 }

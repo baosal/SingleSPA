@@ -1,12 +1,12 @@
 import { useMemo, useState } from "react";
 import "./root.component.css";
 
-import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
-import React from 'react';
-import { AuthProvider } from 'react-oidc-context';
-import { BrowserRouter } from 'react-router';
-import { Layout } from './components/Layout';
-import { ProtectedApp } from './components/ProtectedApp';
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import React from "react";
+import { AuthProvider } from "react-oidc-context";
+import { BrowserRouter } from "react-router";
+import { Layout } from "./components/Layout";
+import { ProtectedApp } from "./components/ProtectedApp";
 
 type NavItem = {
   label: string;
@@ -16,7 +16,7 @@ type NavItem = {
 const navItems: NavItem[] = [
   { label: "Dashboard", href: "/dashboard" },
   { label: "Module 1", href: "/module-1" },
-  { label: "Module 2", href: "/module-2" },
+  { label: "Form Js", href: "/form-js" },
   { label: "User info (React)", href: "/user-info" },
 ];
 
@@ -36,13 +36,18 @@ export default function Root({ name, oidcSetting, onSigninCallback }) {
   return (
     <React.StrictMode>
       <BrowserRouter basename="/">
-        <AuthProvider userManager={oidcSetting} onSigninCallback={onSigninCallback}>
+        <AuthProvider
+          userManager={oidcSetting}
+          onSigninCallback={onSigninCallback}
+        >
           <QueryClientProvider client={new QueryClient()}>
             <Layout>
               <ProtectedApp>
-
                 <section className="module-root">
-                  <aside aria-label="Module navigation" className="module-sidebar">
+                  <aside
+                    aria-label="Module navigation"
+                    className="module-sidebar"
+                  >
                     <div className="module-sidebarTitle">Side Bar (React)</div>
                     <nav>
                       <ul className="module-nav">
@@ -52,10 +57,11 @@ export default function Root({ name, oidcSetting, onSigninCallback }) {
                             <li key={item.label} className="module-navItem">
                               <button
                                 type="button"
-                                className={`module-navButton ${isActive
+                                className={`module-navButton ${
+                                  isActive
                                     ? "module-navButton--active"
                                     : "module-navButton--inactive"
-                                  }`}
+                                }`}
                                 onClick={() => {
                                   setActive(item.label);
                                   if (typeof window !== "undefined") {
@@ -72,7 +78,6 @@ export default function Root({ name, oidcSetting, onSigninCallback }) {
                     </nav>
                   </aside>
                 </section>
-
               </ProtectedApp>
             </Layout>
           </QueryClientProvider>

@@ -1,0 +1,47 @@
+[
+    {
+        "variableKey": 2251799831299541,
+        "name": "note",
+        "value": "\"For Testing Purposes\"",
+        "scopeKey": 2251799831299540,
+        "processInstanceKey": 2251799831299540,
+        "tenantId": "<default>",
+        "truncated": false
+    },
+    {
+        "variableKey": 2251799831299542,
+        "name": "total",
+        "value": "19999",
+        "scopeKey": 2251799831299540,
+        "processInstanceKey": 2251799831299540,
+        "tenantId": "<default>",
+        "truncated": false
+    },
+    {
+        "variableKey": 2251799831299543,
+        "name": "payDate",
+        "value": "\"2026-01-03\"",
+        "scopeKey": 2251799831299540,
+        "processInstanceKey": 2251799831299540,
+        "tenantId": "<default>",
+        "truncated": false
+    },
+    {
+        "variableKey": 2251799831299544,
+        "name": "tip",
+        "value": "50",
+        "scopeKey": 2251799831299540,
+        "processInstanceKey": 2251799831299540,
+        "tenantId": "<default>",
+        "truncated": false
+    },
+    {
+        "variableKey": 2251799831299550,
+        "name": "totalWithTax",
+        "value": "23998.8",
+        "scopeKey": 2251799831299540,
+        "processInstanceKey": 2251799831299540,
+        "tenantId": "<default>",
+        "truncated": false
+    }
+]

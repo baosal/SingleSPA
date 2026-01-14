@@ -1,0 +1,20 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#form {
+  max-width: 100%;
+  height: 100%;
+}
+
+#root {
+  max-width: 100%;
+  height: 100%;
+}
+
+.fjs-powered-by.fjs-form-field {
+  display: none;
+}
