@@ -1,7 +1,6 @@
 import type { FC } from 'react';
 import { useAuth } from 'react-oidc-context';
 import { SimpleTable } from './SimpleTable.tsx';
-import { WithToken } from './WithToken.tsx';
 
 interface Row {
   label: string;

@@ -1,13 +1,12 @@
 import { useMemo, useState } from "react";
 import "./root.component.css";
 
-import { QueryClientProvider } from '@tanstack/react-query';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import React from 'react';
 import { AuthProvider } from 'react-oidc-context';
 import { BrowserRouter } from 'react-router';
 import { Layout } from './components/Layout';
 import { ProtectedApp } from './components/ProtectedApp';
-import { onSigninCallback, queryClient, userManager } from './config';
 
 type NavItem = {
   label: string;
@@ -18,10 +17,10 @@ const navItems: NavItem[] = [
   { label: "Dashboard", href: "/dashboard" },
   { label: "Module 1", href: "/module-1" },
   { label: "Module 2", href: "/module-2" },
-  { label: "User info (React)", href: "/auth" },
+  { label: "User info (React)", href: "/user-info" },
 ];
 
-export default function Root({ name }) {
+export default function Root({ name, oidcSetting, onSigninCallback }) {
   console.log("app " + name + " mounted");
   const initialActive = useMemo(() => {
     const match = navItems.find((item) =>
@@ -37,8 +36,8 @@ export default function Root({ name }) {
   return (
     <React.StrictMode>
       <BrowserRouter basename="/">
-        <AuthProvider userManager={userManager} onSigninCallback={onSigninCallback}>
-          <QueryClientProvider client={queryClient}>
+        <AuthProvider userManager={oidcSetting} onSigninCallback={onSigninCallback}>
+          <QueryClientProvider client={new QueryClient()}>
             <Layout>
               <ProtectedApp>
 

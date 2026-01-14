@@ -7,10 +7,10 @@ import { WithToken } from './routes/WithToken.tsx';
 export const App: FC = () => {
   return (
     <Routes>
-      <Route path="/auth">
+      <Route path="/user-info">
         <Route index={true} element={<Home />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/auth/test-api" element={<WithToken />} />
+        <Route path="/user-info/test-api" element={<WithToken />} />
       </Route>
     </Routes>
   );

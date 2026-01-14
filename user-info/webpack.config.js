@@ -5,7 +5,7 @@ const path = require("path");
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "sag-aftra",
-    projectName: "auth",
+    projectName: "user-info",
     webpackConfigEnv,
     argv,
   });

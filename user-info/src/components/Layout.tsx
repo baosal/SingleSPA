@@ -60,18 +60,18 @@ export const Layout: FC<LayoutProps> = (props) => {
       text: 'User Info',
       protected: true,
       action: () => {
-        navigate("/auth");
+        navigate("/user-info");
       },
     },
     {
       text: 'Test API call',
       protected: true,
       action: () => {
-        navigate("/auth/test-api");
+        navigate("/user-info/test-api");
       },
     },
     {
-      text: 'Logout',
+      text: auth.isAuthenticated ? "Logout" : "Login" ,
       protected: false,
       action: () => {
         void auth.signoutRedirect();

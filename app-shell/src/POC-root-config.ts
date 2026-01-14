@@ -1,4 +1,6 @@
 import { registerApplication, start } from "single-spa";
+import { UserManager, WebStorageStateStore } from 'oidc-client-ts';
+import { userManager } from './oidc-config';
 import {
   constructApplications,
   constructRoutes,
@@ -22,6 +24,17 @@ const applications = constructApplications({
 });
 const layoutEngine = constructLayoutEngine({ routes, applications });
 
-applications.forEach(registerApplication);
+// applications.forEach(registerApplication);
+applications.map(e => {
+  // add custom props to app
+  const app = { ...e, customProps: {
+    oidcSetting: userManager,
+    onSigninCallback: () => {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }};
+  console.log(app);
+  registerApplication(app);
+})
 layoutEngine.activate();
 start();

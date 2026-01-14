@@ -1,28 +1,26 @@
-import { QueryClientProvider } from '@tanstack/react-query';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import React from 'react';
 import { AuthProvider } from 'react-oidc-context';
 import { BrowserRouter } from 'react-router';
 import { App } from './components/App';
 import { Layout } from './components/Layout';
-import { ProtectedApp } from './components/ProtectedApp';
-import { onSigninCallback, queryClient, userManager } from './config';
 
 type RootProps = {
     name: string;
+    oidcSetting: any,
+    onSigninCallback: Function
 };
 
-export default function Root({ name }: RootProps) {
+export default function Root({ name, oidcSetting, onSigninCallback }: RootProps) {
     console.log("app " + name + " mounted");
     return (
         <div>
             <React.StrictMode>
                 <BrowserRouter basename="/">
-                    <AuthProvider userManager={userManager} onSigninCallback={onSigninCallback}>
-                        <QueryClientProvider client={queryClient}>
+                    <AuthProvider userManager={oidcSetting} onSigninCallback={onSigninCallback}>
+                        <QueryClientProvider client={new QueryClient()}>
                             <Layout>
-                                <ProtectedApp>
-                                    <App />
-                                </ProtectedApp>
+                                <App />
                             </Layout>
                         </QueryClientProvider>
                     </AuthProvider>

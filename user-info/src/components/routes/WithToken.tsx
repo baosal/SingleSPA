@@ -6,7 +6,7 @@ import { Alert } from './Alert.tsx';
 export const WithToken: FC = () => {
   const auth = useAuth();
 
-  const url = 'https://dev.sagaftraplans.org/phub/api' + '/participant/23117401';
+  const url = 'https://dev.sagaftraplans.org/phub/api/participant/23117401';
   const queryFn = async () => {
 
 
