@@ -32,6 +32,7 @@
     <!-- <script type="injector-importmap" src="/importmap.json"></script> -->
 
     <% if (isLocal) { %>
+
     <script type="injector-importmap">
       {
         "imports": {
@@ -44,12 +45,12 @@
           "@sag-aftra/module-1": "//localhost:9001/sag-aftra-module-1.js",
           "@sag-aftra/form-js": "//localhost:9002/sag-aftra-form-js.js",
           "@sag-aftra/user-info": "//localhost:9003/sag-aftra-user-info.js",
+          "@sag-aftra/angular": "http://localhost:9004/main.js",
           "@single-spa/welcome": "https://cdn.jsdelivr.net/npm/single-spa-welcome/dist/single-spa-welcome.min.js"
         }
       }
     </script>
     <% } %>
-
     <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@5.1.1/dist/import-map-overrides.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@single-spa/import-map-injector@2.0.1/lib/import-map-injector.js"></script>
   </head>

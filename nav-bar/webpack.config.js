@@ -7,6 +7,7 @@ module.exports = (webpackConfigEnv, argv) => {
     orgName: "sag-aftra",
     projectName: "nav-bar",
     webpackConfigEnv,
+    systemJS: true,
     argv,
   });
 

@@ -1,0 +1,52 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "projects": {
+    "angular": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "browser": "src/main.single-spa.ts",
+            "index": "src/index.html",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.app.json",
+            "outputPath": "dist/angular",
+            "styles": ["src/styles.scss"],
+            "assets": ["src/assets", "src/favicon.ico"]
+          }
+        },
+
+        "build-standalone": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "browser": "src/main.ts",
+            "index": "src/index.html",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.app.json",
+            "outputPath": "dist/angular-standalone",
+            "styles": ["src/styles.scss"],
+            "assets": ["src/assets", "src/favicon.ico"]
+          }
+        },
+
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "angular:build"
+          }
+        },
+
+        "serve-standalone": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "angular:build-standalone"
+          }
+        }
+      }
+    }
+  }
+}

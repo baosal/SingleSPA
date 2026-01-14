@@ -16,6 +16,7 @@ type NavItem = {
 const navItems: NavItem[] = [
   { label: "Dashboard", href: "/dashboard" },
   { label: "Module 1", href: "/module-1" },
+  { label: "Angular Oidc", href: "/angular-oidc" },
   { label: "Form Js", href: "/form-js" },
   { label: "User info (React)", href: "/user-info" },
 ];

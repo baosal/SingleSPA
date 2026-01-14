@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$tsc"
+			],
+			"label": "npm: build",
+			"detail": "ng build"
+		},
+		{
+			"label": "Build Angular for single-spa",
+			"type": "shell",
+			"command": "yarn build",
+			"isBackground": false,
+			"group": "build"
+		}
+	]
+}
